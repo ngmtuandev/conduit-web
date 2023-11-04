@@ -7,7 +7,7 @@ const BodyHome = () => {
       <div className="w-4/6 h-full ">
         <BodyHomeLeft></BodyHomeLeft>
       </div>
-      <div className="w-2/6 h-full bg-red-300">
+      <div className="w-2/6 h-full ">
         <BodyHomeRight></BodyHomeRight>
       </div>
     </div>
