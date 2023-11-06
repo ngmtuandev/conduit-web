@@ -1,12 +1,9 @@
-import api from "../services/client.axios.api";
 import { useQuery, useQueryClient } from "react-query";
+import { getArticlesAPI } from "../services/articles";
 const useArticles = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["articles"],
-    queryFn: async () => {
-      const rs = await api.get("/articles");
-      return rs.data;
-    },
+    queryFn: () => getArticlesAPI(),
   });
   return {
     articles: data?.articles,

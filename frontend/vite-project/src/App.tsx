@@ -1,13 +1,13 @@
 import "./App.css";
 import { QueryClientProvider, QueryClient } from "react-query";
-import HomePage from "./pages/HomePage";
+import Layout from "./layout/Layout";
 
+const queryClient = new QueryClient();
 function App() {
-  const queryClient = new QueryClient();
   return (
     <QueryClientProvider client={queryClient}>
       <div className="text-[80px]">
-        <HomePage></HomePage>
+        <Layout></Layout>
       </div>
     </QueryClientProvider>
   );

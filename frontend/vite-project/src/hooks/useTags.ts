@@ -1,12 +1,9 @@
-import api from "../services/client.axios.api";
 import { useQuery, useQueryClient } from "react-query";
+import { getTagsAPI } from "../services/tags";
 const useTags = () => {
   const { data, isLoading } = useQuery({
     queryKey: ["tags"],
-    queryFn: async () => {
-      const rs = await api.get("/tags");
-      return rs.data;
-    },
+    queryFn: getTagsAPI,
   });
   return {
     tags: data?.tags,

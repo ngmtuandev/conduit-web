@@ -18,7 +18,7 @@ const FORMAT_TIME = (dateString: string) => {
 };
 
 const ArticlesItem = ({ data }: ArticlesItemType) => {
-  console.log("data : ", data);
+  var a = 2;
   return (
     <div className="w-[95%] bg-gray-300 hover:bg-opacity-90 my-2 shadow-xl mb-5 p-4 rounded-xl">
       <div className="flex flex-col">
